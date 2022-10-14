@@ -1,0 +1,78 @@
+{
+  "name": "ignite",
+  "version": "0.0.0",
+  "description": "Ignite Application Frontend",
+  "main": "index.js",
+  "scripts": {
+    "prepare": "npx husky install",
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "@astrojs/tailwind": "2.0.2",
+    "astro": "1.4.2",
+    "tailwindcss": "3.1.8"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "17.1.2",
+    "@commitlint/config-conventional": "17.1.0",
+    "husky": "8.0.1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ],
+    "parserPreset": "conventional-changelog-conventionalcommits",
+    "rules": {
+      "type-case": [
+        2,
+        "always",
+        "lower-case"
+      ],
+      "type-empty": [
+        2,
+        "never"
+      ],
+      "type-enum": [
+        2,
+        "always",
+        [
+          "feat",
+          "fix",
+          "docs",
+          "style",
+          "refactor",
+          "test",
+          "init",
+          "ci",
+          "work",
+          "chore",
+          "delete",
+          "format"
+        ]
+      ],
+      "scope-empty": [
+        0
+      ],
+      "subject-case": [
+        2,
+        "always",
+        "lower-case"
+      ],
+      "subject-empty": [
+        2,
+        "never"
+      ],
+      "subject-full-stop": [
+        2,
+        "never",
+        "."
+      ]
+    }
+  }
+}
